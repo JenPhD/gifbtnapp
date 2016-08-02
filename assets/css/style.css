@@ -1,0 +1,26 @@
+body {
+	background-color: #001;
+	background-image: url("../images/bgfull.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	font-family: "Helvetica", "arial," sans-serif;
+	line-height: 1.5;
+	
+}
+
+.jumbotron {
+	background-color: #99004d;
+	
+
+}
+
+.footer {
+	background-color: #ff5c33;
+	border-top: solid;
+	border-color: #ffffb3;
+	color: white;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	text-align: center;
+}
