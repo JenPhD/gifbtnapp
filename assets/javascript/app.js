@@ -8,7 +8,7 @@ $(document).ready(function () {
 	//adding band buttons and clicking on buttons
 
 	//Initial array of bands and artists
-	var bands = ['The Talking Heads', 'George Clinton', 'The Beatles', 'Gorrilaz', 'Prince'];
+	var bands = ['The Talking Heads', 'George Clinton', 'The Beatles', 'Gorillaz', 'Prince'];
 	
 	//FUNCTIONS
 	//==================================================================================
@@ -47,14 +47,20 @@ $(document).ready(function () {
 
 		// We have this line so that users can hit "enter" instead of clicking on the button
 		return false;
+
+		//Clear the textbox when done
+		$('#band-form').val(" ");
 	});
+	
 
 	// =======================================================
 	//Create the queryURL, which equals the base qrl + the band name for the search term. You get 
 	//the band name from an on click event listener. Used document.body because the music class was 
 	//created from the function above and was thus out of scope just for a generic on click function.
 	$(document.body).on('click', '.music', function() {
-		
+		//first empty the div with the gifs
+	    $('#gifdisplay').empty();
+
 		//This replaces the spaces in a band name with + so the URL works
 		var searchTerm = $(this).data('name').split(' ').join('+');
 
@@ -78,9 +84,6 @@ $(document).ready(function () {
 	    		//for loop for the 9 objects in the giphy array.
 	    		for (var j = 0; j < giphys.length; j++) {
 	     	
-	     			//first empty the div with the gifs
-	     			//$('#gifrow').empty();
-
 	     			//Create a new div for the music gifs
 
 	     			var musicDiv = $('<div class="gif">');
@@ -92,14 +95,25 @@ $(document).ready(function () {
 	     			var bandImages = $('<img>');
 	     			bandImages.attr('src', giphys[j].images.fixed_height.url);
 
-	     			musicDiv.append(rating);
+	     			musicDiv.prepend(rating);
 	     			musicDiv.prepend(bandImages);
 
-	     			$('#gifrow').prepend(musicDiv);
+	     			//$('#gifdisplay').append(musicDiv);
 
 	     			//imgCount++;
-	     			//console.log(imgCount);
+	     		if(j < 3) {
+	      			$('#gif1').prepend(musicDiv);
 	      		}
+	      		else if (j < 6) {
+	      			$('#gif2').prepend(musicDiv);
+	      		}
+	      		else {
+	      			$('#gif3').prepend(musicDiv);
+	      		}	//console.log(imgCount);
+	      		}
+	      		
+
+
 	      	
 		});
 	});

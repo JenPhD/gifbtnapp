@@ -17,23 +17,27 @@
 <body>
 <div class="jumbotron">
 	<div class="container">
-		<div id="btns" class="col-sm-12"></div>
+		<div id="btns" class="col-sm-9"></div>
+    <div id="form" class="col-sm-3">
+      <form id="band-form">
+        <label for="band-input">Add another band or artist!</label>
+        <input type="text" id="band-input"><br>
+        <!-- Button triggers new movie to be added -->
+        <input id="addBand" type="submit" value="Add a band">
+    </form>
 	</div>
+  </div>
 </div><!--end jumbotron-->
-<div class="container"> 
-	<div id="gifdisplay" class="row">
-		<div id="gifrow" class="col-sm-9"></div>
-
-		<div id="search" class="col-sm-3">
-			<form id="band-form">
-    			<label for="band-input">Add another band or artist!</label>
-    			<input type="text" id="band-input"><br>
-    
-    			<!-- Button triggers new movie to be added -->
-    			<input id="addBand" type="submit" value="Add a band">
-  			</form>
-		</div>
-	</div>
+<div class="container">
+  <div class="row">
+    <div id="gif1" class="col-md-4"></div>
+  </div>
+<div class="row">
+    <div id="gif2" class="col-md-4"></div>
+</div>
+  <div class="row">
+    <div id="gif3" class="col-md-4"></div>
+  </div>
 </div><!--end container-->
 <footer class="footer">
       <small>&copy;Copyright Jennifer Pemberton 2016</small>
