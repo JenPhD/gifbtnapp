@@ -103,7 +103,7 @@ $(document).ready(function () {
 	     			.attr('data-state', 'still');
 	     		
 	     			musicDiv.prepend(rating);
-	     			musicDiv.prepend($bandImages);
+	     			musicDiv.prepend(bandImages);
 
 	     			//Putting 3 gifs in each column
 	     			if(j < 3) {
