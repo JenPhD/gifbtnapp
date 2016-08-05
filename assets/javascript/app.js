@@ -103,7 +103,7 @@ $(document).ready(function () {
 	     			.attr('data-state', 'still');
 	     		
 	     			musicDiv.prepend(rating);
-	     			musicDiv.prepend(bandImages);
+	     			musicDiv.prepend($bandImages);
 
 	     			//Putting 3 gifs in each column
 	     			if(j < 3) {
@@ -122,17 +122,13 @@ $(document).ready(function () {
 						//console.log(state);
 						//console.log(this);
 
-				
 					if (state == 'still') {
                 			$(this).attr('src', $(this).data('animate'));
-            		} 
-            		else if (stat == 'animate') {
+                			$(this).data('state', 'animate');
+            		} else {
                 			$(this).attr('src', $(this).data('still'));
-                			} 
-                	else {
-            			$(this).attr('data-state', 'still');
-            		}
-
+                			$(this).data('state', 'still');
+            		}  	
 				});	
 	    	
 		
