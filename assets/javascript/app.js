@@ -3,7 +3,7 @@ $(document).ready(function () {
 	//SETUP VARIABLES
 	//================================================================================
 	var authKey = "dc6zaTOxFJmzC";
-	var queryURLBase = "http://api.giphy.com/v1/gifs/search?q=" 
+	var queryURLBase = "https://api.giphy.com/v1/gifs/search?q=" 
 	//These variables wil hold the results we get from the user input after
 	//adding band buttons and clicking on buttons
 
