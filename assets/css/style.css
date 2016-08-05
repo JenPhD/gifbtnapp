@@ -75,7 +75,7 @@ html {
 
 }
 
-img {
+.bandimg {
 	margin: 10px;
 	height: 150px;
 	width: 250px;
@@ -96,6 +96,11 @@ p {
 	text-align: center;
 	width: 250px;
 }
+
+#poweredby {
+	size: 100%;
+}
+
 .footer {
 	background-color: #ff5c33;
 	border-top: solid;

@@ -43,7 +43,7 @@ $(document).ready(function () {
 		bands.push(band);
 
 		//Clear the textbox when done
-		$('#band-form').val(" ");
+		$('#band-input').val(" ");
 		
 		// Our array then runs again to add the user input buttons
 		renderButtons();
@@ -80,10 +80,7 @@ $(document).ready(function () {
 
 	    	//Giphys is an array of objects returned from the API.
 	    	var giphys = response.data;
-	    	console.log(giphys);
-
-	    	//Count of gifs displayed with each click of the button
-			//imgCount = 0;
+	    	//console.log(giphys);
 
 	    		//for loop for the 9 objects in the giphy array.
 	    		for (var j = 0; j < giphys.length; j++) {
@@ -91,36 +88,53 @@ $(document).ready(function () {
 	     			//Create a new div for the music gifs
 
 	     			var musicDiv = $('<div class="gif">');
-
+					
 	     			//Add the ratings
 	      			var rating = $('<p>').text("Rating: " + giphys[j].rating);
 	     			//console.log(rating);
 
-	     			var bandImages = $('<img>');
-	     			bandImages.attr('src', giphys[j].images.fixed_height.url);
+	     			//Get still images and animated gifs
 
-	     			musicDiv.append(rating);
+	     			var bandImages = $('<img class = "bandimg">');
+	     			bandImages.attr('src', giphys[j].images.fixed_height_still.url);
+	     			bandImages.attr('data-still', giphys[j].images.fixed_height_still.url);
+	     			bandImages.attr('data-animate', giphys[j].images.fixed_height.url);
+	     			bandImages.attr('data-state', 'still');
+	     		
+	     			musicDiv.prepend(rating);
 	     			musicDiv.prepend(bandImages);
 
-	     			//$('#gifdisplay').append(musicDiv);
-
-	     			//imgCount++;
+	     			//Putting 3 gifs in each column
 	     			if(j < 3) {
-	      				$('#gif1').prepend(musicDiv);
+	      				$('#gif1').append(musicDiv);
 	      			}
 	      			else if (j < 6) {
-	      				$('#gif2').prepend(musicDiv);
+	      				$('#gif2').append(musicDiv);
 	      			}
 	      			else {
-	      				$('#gif3').prepend(musicDiv);
+	      				$('#gif3').append(musicDiv);
 	      			}	
 	      		}
+
+	      		$('.bandimg').on('click', function() {
+					var state = $(this).attr('data-state'); 
+						//console.log(state);
+
+					if (state == 'still') {
+                			$(this).attr('src', $(this).data('animate'));
+            		} else {
+                			$(this).attr('src', $(this).data('still'));
+                			$(this).attr('data-state', 'still');
+            		}  	
+				});	
+	    	
+		
+	    }); 	
 	      		
-
-
-	      	
-		});
+					
 	});
+
+
 });//ending document ready
 	
 
