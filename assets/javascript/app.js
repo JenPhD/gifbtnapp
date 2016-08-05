@@ -59,7 +59,9 @@ $(document).ready(function () {
 	//created from the function above and was thus out of scope just for a generic on click function.
 	$(document.body).on('click', '.music', function() {
 		//first empty the div with the gifs
-	    $('#gifdisplay').empty();
+	   	$('#gif1').empty();
+	   	$('#gif2').empty();
+	   	$('#gif3').empty();
 
 		//This replaces the spaces in a band name with + so the URL works
 		var searchTerm = $(this).data('name').split(' ').join('+');
