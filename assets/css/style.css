@@ -6,6 +6,10 @@ body {
 	font-family: "Helvetica", "arial," sans-serif;	
 }
 
+#header {
+	color: #ff0000;
+}
+
 .btn-default {
 	border-color: #ffffb3;
 	border-radius: 0;
@@ -17,7 +21,21 @@ body {
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default {
     color: #ff0000;
     background: #ffffb3;
-    border-color: #white; /*set the color you want here*/
+    border-color: #white; 
+}
+
+#addBand {
+	border-color: #ffffb3;
+	border-radius: 0;
+	background: #ff0000;
+	color: white;
+	margin: 10px;
+}
+
+#addBand:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default {
+    color: #ff0000;
+    background: #ffffb3;
+    border-color: #white; 
 }
 
 .container {
@@ -27,7 +45,6 @@ body {
 	font-size: 20px;
 	font-color: #001;
 	max-width: 100%;
-
 }
 
 html {
@@ -65,8 +82,20 @@ img {
 }
 
 #band-form {
+	
+	color: #ff0000;
+
 }
 
+p {
+	align-items: center;
+	background-color: #ffffb3;
+	background-color: #ffffb3;
+	color: #99004d;
+	margin-left: 90px;
+	text-align: center;
+	width: 250px;
+}
 .footer {
 	background-color: #ff5c33;
 	border-top: solid;

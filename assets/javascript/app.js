@@ -41,6 +41,9 @@ $(document).ready(function () {
 
 		// The movie from the textbox is then added to our array
 		bands.push(band);
+
+		//Clear the textbox when done
+		$('#band-form').val(" ");
 		
 		// Our array then runs again to add the user input buttons
 		renderButtons();
@@ -48,8 +51,7 @@ $(document).ready(function () {
 		// We have this line so that users can hit "enter" instead of clicking on the button
 		return false;
 
-		//Clear the textbox when done
-		$('#band-form').val(" ");
+		
 	});
 	
 
@@ -97,21 +99,21 @@ $(document).ready(function () {
 	     			var bandImages = $('<img>');
 	     			bandImages.attr('src', giphys[j].images.fixed_height.url);
 
-	     			musicDiv.prepend(rating);
+	     			musicDiv.append(rating);
 	     			musicDiv.prepend(bandImages);
 
 	     			//$('#gifdisplay').append(musicDiv);
 
 	     			//imgCount++;
-	     		if(j < 3) {
-	      			$('#gif1').prepend(musicDiv);
-	      		}
-	      		else if (j < 6) {
-	      			$('#gif2').prepend(musicDiv);
-	      		}
-	      		else {
-	      			$('#gif3').prepend(musicDiv);
-	      		}	//console.log(imgCount);
+	     			if(j < 3) {
+	      				$('#gif1').prepend(musicDiv);
+	      			}
+	      			else if (j < 6) {
+	      				$('#gif2').prepend(musicDiv);
+	      			}
+	      			else {
+	      				$('#gif3').prepend(musicDiv);
+	      			}	
 	      		}
 	      		
 
