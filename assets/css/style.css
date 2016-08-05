@@ -7,11 +7,13 @@ body {
 }
 
 #header {
-	color: #ff0000;
+	font-family: 'Rock Salt', cursive;
+	color: #ffff1a;
+	text-shadow: 2px 2px #ff0000;
 }
 
 .btn-default {
-	border-color: #ffffb3;
+	border-color: #ffff1a;
 	border-radius: 0;
 	background: #ff0000;
 	color: white;
@@ -20,12 +22,12 @@ body {
 
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default {
     color: #ff0000;
-    background: #ffffb3;
+    background: #ffff1a;
     border-color: #white; 
 }
 
 #addBand {
-	border-color: #ffffb3;
+	border-color: #ffff1a;
 	border-radius: 0;
 	background: #ff0000;
 	color: white;
@@ -34,7 +36,7 @@ body {
 
 #addBand:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default {
     color: #ff0000;
-    background: #ffffb3;
+    background: #ffff1a;
     border-color: #white; 
 }
 
@@ -82,15 +84,13 @@ html {
 }
 
 #band-form {
-	
-	color: #ff0000;
-
+	color: #ffff1a;
+	text-shadow: 2px 2px #ff0000;	
 }
 
 p {
 	align-items: center;
-	background-color: #ffffb3;
-	background-color: #ffffb3;
+	background-color: #ffff80;
 	color: #99004d;
 	margin-left: 90px;
 	text-align: center;
@@ -104,7 +104,7 @@ p {
 .footer {
 	background-color: #ff5c33;
 	border-top: solid;
-	border-color: #ffffb3;
+	border-color: #ffff80;
 	color: white;
 	display: flex;
   	justify-content: center;

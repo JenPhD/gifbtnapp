@@ -56,7 +56,7 @@ $(document).ready(function () {
 	
 
 	// =======================================================
-	//Create the queryURL, which equals the base qrl + the band name for the search term. You get 
+	//Create the queryURL, which equals the base url + the band name for the search term. You get 
 	//the band name from an on click event listener. Used document.body because the music class was 
 	//created from the function above and was thus out of scope just for a generic on click function.
 	$(document.body).on('click', '.music', function() {
@@ -95,11 +95,12 @@ $(document).ready(function () {
 
 	     			//Get still images and animated gifs
 
-	     			var bandImages = $('<img class = "bandimg">');
-	     			bandImages.attr('src', giphys[j].images.fixed_height_still.url);
-	     			bandImages.attr('data-still', giphys[j].images.fixed_height_still.url);
-	     			bandImages.attr('data-animate', giphys[j].images.fixed_height.url);
-	     			bandImages.attr('data-state', 'still');
+	     			var bandImages = $('<img>')
+	     			.addClass('bandimg')
+	     			.attr('src', giphys[j].images.fixed_height_still.url)
+	     			.attr('data-still', giphys[j].images.fixed_height_still.url)
+	     			.attr('data-animate', giphys[j].images.fixed_height.url)
+	     			.attr('data-state', 'still');
 	     		
 	     			musicDiv.prepend(rating);
 	     			musicDiv.prepend(bandImages);
@@ -119,13 +120,19 @@ $(document).ready(function () {
 	      		$('.bandimg').on('click', function() {
 					var state = $(this).attr('data-state'); 
 						//console.log(state);
+						//console.log(this);
 
+				
 					if (state == 'still') {
                 			$(this).attr('src', $(this).data('animate'));
-            		} else {
+            		} 
+            		else if (stat == 'animate') {
                 			$(this).attr('src', $(this).data('still'));
-                			$(this).attr('data-state', 'still');
-            		}  	
+                			} 
+                	else {
+            			$(this).attr('data-state', 'still');
+            		}
+
 				});	
 	    	
 		
