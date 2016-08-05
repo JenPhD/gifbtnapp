@@ -117,6 +117,7 @@ $(document).ready(function () {
 	      			}	
 	      		}
 
+
 	      		$('.bandimg').on('click', function() {
 					var state = $(this).attr('data-state'); 
 						//console.log(state);
@@ -124,10 +125,10 @@ $(document).ready(function () {
 
 					if (state == 'still') {
                 			$(this).attr('src', $(this).data('animate'));
-                			$(this).data('state', 'animate');
+                			$(this).attr('data-state', 'animate');
             		} else {
                 			$(this).attr('src', $(this).data('still'));
-                			$(this).data('state', 'still');
+                			$(this).attr('data-state', 'still');
             		}  	
 				});	
 	    	
