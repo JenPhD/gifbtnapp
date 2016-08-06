@@ -88,6 +88,10 @@ html {
 	text-shadow: 2px 2px #ff0000;	
 }
 
+#band-input {
+	color: #99004d ;
+}
+
 p {
 	align-items: center;
 	background-color: #ffff80;
